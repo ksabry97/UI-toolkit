@@ -1,0 +1,18 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "moduleResolution": "bundler",
+    "emitDecoratorMetadata": false,
+    "target": "es2022",
+    "module": "preserve",
+    "lib": ["es2020", "dom"],
+    "baseUrl": ".",
+    "paths": {
+      "@ui-kit-workspace/angular-ui": ["libs-angular/src/index.ts"],
+      "@ui-kit-workspace/react-ui": ["libs-react/src/index.ts"],
+      "@ui-kit-workspace/tokens": ["libs-shared/src/index.ts"]
+    },
+    "skipLibCheck": true
+  },
+  "exclude": ["node_modules", "tmp"]
+}
