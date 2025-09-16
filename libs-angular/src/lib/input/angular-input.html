@@ -1,0 +1,11 @@
+<input
+  [type]="type"
+  [placeholder]="placeholder"
+  [value]="value"
+  [disabled]="disabled"
+  [readonly]="readonly"
+  (input)="onChange($event)"
+  (blur)="touched()"
+  [id]="fieldName"
+  [name]="fieldName"
+/>

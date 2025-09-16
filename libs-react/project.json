@@ -1,9 +1,24 @@
 {
   "name": "react-ui",
   "$schema": "../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs-react/react-ui/src",
+  "sourceRoot": "libs-react/src/lib",
   "projectType": "library",
   "tags": [],
-  "// targets": "to see all targets run: nx show project react-ui --web",
-  "targets": {}
+  "targets": {
+    "storybook": {
+      "executor": "@nx/storybook:storybook",
+      "options": {
+        "configDir": "libs-react/.storybook",
+        "port": 4400
+      }
+    },
+    "build-storybook": {
+      "executor": "@nx/storybook:build",
+      "outputs": ["{workspaceRoot}/dist/storybook/react-ui"],
+      "options": {
+        "configDir": "libs-react/.storybook",
+        "outputDir": "dist/storybook/react-ui"
+      }
+    }
+  }
 }

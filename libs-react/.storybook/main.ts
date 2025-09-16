@@ -5,7 +5,7 @@ import { mergeConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 const config: StorybookConfig = {
-  stories: ['../src/lib/**/*.@(mdx|stories.@(js|jsx|ts|tsx))'],
+  stories: ['../src/lib/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
   addons: [],
   framework: {
     name: '@storybook/react-vite',
@@ -15,6 +15,11 @@ const config: StorybookConfig = {
   viteFinal: async (config) =>
     mergeConfig(config, {
       plugins: [react(), nxViteTsPaths()],
+      css: {
+        preprocessorOptions: {
+          scss: {},
+        },
+      },
     }),
 };
 

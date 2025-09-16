@@ -1,0 +1,22 @@
+.button {
+  padding: 4px 8px;
+  height: 36px;
+  width: fit-content;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+
+  &.primary {
+    background-color: blue !important;
+  }
+
+  &.secondary {
+    background-color: black;
+  }
+
+  &.tertiary {
+    background-color: grey;
+  }
+}
