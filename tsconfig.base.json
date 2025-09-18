@@ -10,7 +10,8 @@
     "paths": {
       "@ui-kit-workspace/angular-ui": ["libs-angular/src/index.ts"],
       "@ui-kit-workspace/react-ui": ["libs-react/src/index.ts"],
-      "@ui-kit-workspace/tokens": ["libs-shared/src/index.ts"]
+      "@ui-kit-workspace/libs-shared": ["libs-shared/src/index.ts"],
+      "@ui-kit-workspace/libs-shared/*": ["libs-shared/src/lib/*"]
     },
     "skipLibCheck": true
   },

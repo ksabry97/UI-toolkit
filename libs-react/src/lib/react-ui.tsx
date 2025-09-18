@@ -1,3 +1,4 @@
+import '@ui-kit-workspace/tokens/styles';
 import styles from './react-ui.module.scss';
 
 export function ReactUi() {

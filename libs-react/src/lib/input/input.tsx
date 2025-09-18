@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import '@ui-kit-workspace/libs-shared';
 import styles from './input.module.scss';
 
 interface Validator {
@@ -55,7 +56,7 @@ export function Input({
 
   return (
     <div className={styles.formContainer}>
-      {label && <label>{label}</label>}
+      {label && <label className="text-gray-500">{label}</label>}
       <input
         className={`${styles.input} ${error ? styles['invalid'] : ''}`}
         onChange={handleChange}

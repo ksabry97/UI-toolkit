@@ -1,0 +1,13 @@
+{
+  "name": "@uikit/tokens",
+  "version": "0.1.0",
+  "description": "Design tokens + Tailwind stylesheet for ui-kit",
+  "main": "index.js",
+  "style": "styles.css",
+  "files": [
+    "index.js",
+    "styles.css",
+    "README.md"
+  ],
+  "license": "MIT"
+}

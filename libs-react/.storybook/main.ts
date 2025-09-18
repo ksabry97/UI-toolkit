@@ -3,6 +3,8 @@ import type { StorybookConfig } from '@storybook/react-vite';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import { mergeConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import autoprefixer from 'autoprefixer';
+import tailwindPostcss from '@tailwindcss/postcss';
 
 const config: StorybookConfig = {
   stories: ['../src/lib/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
@@ -16,6 +18,9 @@ const config: StorybookConfig = {
     mergeConfig(config, {
       plugins: [react(), nxViteTsPaths()],
       css: {
+        postcss: {
+          plugins: [tailwindPostcss(), autoprefixer()],
+        },
         preprocessorOptions: {
           scss: {},
         },
